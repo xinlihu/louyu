@@ -5,6 +5,9 @@ import VueRouter from 'vue-router'
 import showMap from '../views/showMap/index'
 import Login from '../views/loginView/login'
 import detail from '../views/detailMap/index'
+import MapContainer from '../components/MapContainer'
+import MapIndex from '../components/MapIndex'
+
 
 Vue.use(VueRouter);
 const originalPush = VueRouter.prototype.push
@@ -33,6 +36,16 @@ export default new VueRouter({
         path:'/detail',
         name:'detail',
         component:detail
+      },
+      {
+        path: '/map',
+        name: 'MapContainer',
+        component: MapContainer
+      },
+      {
+        path:'/index',
+        name:'MapIndex',
+        component:MapIndex
       }
     ]
 })
